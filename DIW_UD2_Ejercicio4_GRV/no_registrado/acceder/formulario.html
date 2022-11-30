@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <!-- ----------- CSS -------------- -->
+    <link rel="stylesheet" type="text/css" href="../../css/style.css" >
+</head>
+<body>
+    <div class="caja">
+        <div class="caja2">
+            <!-- Encabezado -->
+            <header>
+                <div class="logo"><h1 id="TITULO">Jardinería a Domicilio</h1></div>
+                <!-- Menu de Navegación -->
+                <nav>
+                    <ul>
+                        <li><a href="../../index.html">Inicio</a></li>
+                        <li class="dropdown">
+                            <a href="">Servicios</a>
+                            <div class="dropdown-content">
+                                <a href="../servicios/desbrozar.html">Desbroce de parcelas y fincas</a>
+                                <a href="../servicios/diseno_jardines.html">Diseño de Jardines</a>
+                                <a href="../servicios/instalacion_cesped.html">Instalación de Césped Natural y Artificial</a>
+                                <a href="../servicios/mantenimiento_jardines.html">Mantenimiento y limpieza de jardines</a>
+                                <a href="../servicios/poda_altura.html">Poda en Altura</a>
+                                <a href="../servicios/riegos.html">Riegos automáticos y de goteo</a>
+                            </div>
+                        </li>
+                        <li><a href="../nosotros/nosotros.html">Nosotros</a></li>
+                        <li><a href="../contacto/contacto.html">Contacto</a></li>
+                        <li id="sesion"><a class="active" href="formulario.html">Acceder</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <h1 class="titulo">Formulario de Registro</h1>
+            <form action="" method="GET">
+                <!-- --------------------------------------------------------------------------------------------------->
+                <!-- ----------------------------------- Datos personales ---------------------------------------------->
+                <!-- --------------------------------------------------------------------------------------------------->
+                <fieldset>
+                    <legend>Datos personales</legend>
+
+                    <p>
+                        <!-- ---- Text ---- -->
+                        Nombre: 
+                        <input type="text" name="nombre" minlength="1" maxlength="40" required pattern="[A-Za-z]+"
+                            title="Solo se permiten Letras."
+                        /><br><br> 
+
+                        <!--  
+                            Este campo es requerido y tiene una validación que permite solo la introduccion de letras y un minimo 
+                            uno y un maximo de 40.
+                        -->
+
+                        <!-- ---- Text ---- -->
+                        Primer apellido: 
+                        <input type="text" name="apellido1" size="25" minlength="1" maxlength="40" required pattern="[A-Za-z]+"
+                            title="Solo se permiten Letras."
+                        /><br><br> 
+
+                        <!--  
+                            Este campo es requerido y tiene una validación que permite solo la introduccion de letras y un minimo 
+                            uno y un maximo de 40.
+                        -->
+
+                        <!-- ---- Text ---- -->
+                        Segundo apellido:
+                        <input type="text" name="apellido2" size="25" minlength="1" maxlength="40" required pattern="[A-Za-z]+"
+                            title="Solo se permiten Letras."
+                        /><br> 
+
+                        <!--  
+                            Este campo es requerido y tiene una validación que permite solo la introduccion de letras y un minimo 
+                            uno y un maximo de 40.
+                        -->
+                    </p>
+
+                    <!-- ---- Date ---- -->
+                    <p>
+                        Fecha de Nacimiento: <input type="date" name="nacimiento" min="1980-01-01" max="2004-12-31"/>
+
+                        <!--  
+                            Este tiene restringido las fechas del 2004 hacia adelante, para permitir que solo introduzcan fechas
+                            para mayores de 18 años.
+                        -->
+                    </p>
+
+                    <!-- --- Number --- -->
+                    <p>
+                        Número de miembros unidad familiar: <input type="number" name="edad" min="0" max="20" step="2" required>
+                    </p>
+
+                    <!-- ---- Text ---- -->
+                    <p>
+                        Dirección: <input type="text" name="direccion" size="50" value="calle o plaza, número y piso."/>
+                    </p>
+
+                    <!-- --- Select --- -->
+                    <p>
+                        País:
+                        <select name="frecuencia">
+                            <option>España</option>
+                            <option>Alemania</option>
+                            <option>Estados Unidos</option>
+                            <option>China</option>
+                        </select>
+                    </p>
+
+                    <!-- ---- Radio ---- -->
+                    <p>
+                        Sexo:
+                        <ul class="sexos">
+                            <li class="radio"><input type="radio" name="sexo" value="h"/> Hombre</li>
+                            <li class="radio"><input type="radio" name="sexo" value="m"/> Mujer</li>
+                            <li class="radio"><input type="radio" name="sexo" value="x"/> Prefiero no decirlo</li>
+                        </ul>
+                    </p>
+
+                    <hr>
+                    <!-- ----- Tel ------ -->
+                    <p>
+                        Teléfono: <input type="tel" name="movil" value="Tel.." required pattern="^[9|8|7|6]\d{8}$"
+                            title="Solo se permiten 9 dígitos comenzando por 9, 8, 7 o 6."
+                        >
+
+                        <!--  
+                            Este campo es requerido y tiene una validación que permite 9 dígitos comenzando por 9, 8, 7 o 6.
+                        -->
+                    </p>
+
+                    <!-- ----- Email ------ -->
+                    <p>
+                        Correo Electronico: <input type="email" name="email" size="35" value=" @ "/>
+                    </p>
+
+                    <!-- ---- Password ---- -->
+                    <p>
+                        Contraseña: <input type="password" name="contraseña" min="8" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Contraseña Alfanumerica: Minimo 8 caracteres, 1 letra Mayuscula, 1 letra Minuscula."
+                        />
+
+                        <!--  
+                            Este campo es requerido y tiene una validación que comprueba que contenga 8 caracteres con una letra
+                            mayuscula y otra minuscula.
+                        -->
+                    </p>
+                       
+                         
+                </fieldset>	
+
+                <!-- --------------------------------------------------------------------------------------------------->
+                <!-- ------------------------------------------- Usuario ----------------------------------------------->
+                <!-- --------------------------------------------------------------------------------------------------->
+                <fieldset>
+                    <legend>Usuario</legend> 
+
+                    <!-- ------ File ------- -->
+                    <p>
+                        Foto de Perfil: <br/>
+                        <input type="file" name="perfil"/>
+                    </p>
+
+                    <!-- ---- Textarea ----- -->
+                    <p>
+                        Descripción: <br/>
+                        <textarea name="descripcion" rows="5" cols="50">Aquí... </textarea>
+
+                        <!--  
+                            Este campo tiene definido el tamaño del área de texto.
+                        -->
+
+                    </p>
+
+                    <!-- ------- Time ------- -->
+                    <p>
+                        Hora de Inscripción: <input type="time" min="06:00" max="23:00" required>
+
+                        <!--  
+                            Este campo es requerido y tiene una validación que comprueba que la hora sea entre las 6am y 23pm.
+                        -->
+                    </p>
+
+                    <!-- ----- Checkbox ----- -->
+                    <p>
+                        Recibir notificación: <br/>
+                        <input type="checkbox" name="curiosidades"/> Curiosidades<br/>
+                        <input type="checkbox" name="servicios"/> Nuevos Servicios<br/>
+                        <input type="checkbox" name="opiniones"/> Opiniones<br/>
+                    </p>
+
+                    <!-- -------- URL -------- -->
+                    <p>
+                        Página web: <input type="url" name="url" placeholder="https://www.google.es/" required  pattern="https://.*"
+                            title="Debes introducir una URL valida."
+                        >
+                        <!--  
+                            Este campo es requerido y tiene una validación que comprueba que empiece por "https://.*".
+                        -->
+                    </p>
+                </fieldset>
+                
+                <!-- --------------------------------------------------------------------------------------------------->
+                <!-- ------------------------------------------- Botones ----------------------------------------------->
+                <!-- --------------------------------------------------------------------------------------------------->
+                <fieldset>
+                    <!-- Boton Resetear -->
+                    <legend>Resetear</legend>
+                    <p>
+                        Borrar todos los datos del formulario y volver a empezar:
+                        <br>
+                        <input type="reset" value="Borrar"/>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <!-- Boton Enviar -->
+                    <legend>Enviar Formulario</legend>
+                    <p>
+                        <a href="../../index_registrado.html"><input type="button" value="Enviar"/></a>
+                        <!-- Boton cambiado, no ejecuta las comprobaciones pero asi podemos simular el registro -->
+                     <p>
+                </fieldset>
+            </form>
+
+            <footer>
+                <div>
+                    <div class="footer-info">
+                        <p>Tu empresa de Jardinería</p>
+                        <p>Redes sociales</p>
+
+                        <div>
+                            <a href="https://es-es.facebook.com/"><img src="../../img/iconos/icon_f.png" class="icon_footer"></a>
+                            <a href="https://www.google.com/intl/es/gmail/about/"><img src="../../img/iconos/icon_g.png" class="icon_footer"></a>
+                            <a href="https://www.instagram.com/"><img src="../../img/iconos/icon_i.jpg" class="icon_footer"></a>
+                            <a href="https://es.wikipedia.org/wiki/Tel%C3%A9fono"><img src="../../img/iconos/icon_t.png" class="icon_footer"></a>
+                        </div>
+            
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
